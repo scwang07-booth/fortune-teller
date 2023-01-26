@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   # PART 1: EACH IN ERB
   # ===================
 
-  get("/lottery/lucky", { :controller => "numbers", :action => "winners" })
   get("/", { :controller => "numbers", :action => "winners" })
+  get("/lottery/lucky", { :controller => "numbers", :action => "winners" })
+  get("/lottery/unlucky", { :controller => "numbers", :action => "losers"})
+
 
   # Let users visit URLs:
 
@@ -15,7 +17,7 @@ Rails.application.routes.draw do
   # Uncomment each route below ONE AT A TIME and debug.
   # Do NOT uncomment more than one at a time, or you'll be dealing with multiple syntax errors at once.
 
-  # get("/zodiacs/aries", { :controller =>  fire, action =>  "ram" })
+  get("/zodiacs/aries", { :controller => "fire", :action => "ram" })
   # get("/zodiacs/leo", { :controller => "fire", :action => "lion" })
   # get("/zodiacs/sagittarius" { :controller => "fire", :action => "archer" })
   
@@ -27,8 +29,8 @@ Rails.application.routes.draw do
   # get(" /zodiacs/libra", { :controller => "air", :action => "scales" })
   # get ("/zodiacs/aquarius", { :controller => "air", :action => "waterbearer" })
   
-  # get("/zodiacs/cancer " { :controller => "earth" :action => "crab" })
-  # get("/zodiac/ scorpio", { :controller => "Water", :action => "scorpion" })
+  # get("/zodiacs/cancer " { :controller => "water" :action => "crab" })
+  # get("/zodiac/ scorpio", { :controller => "water", :action => "scorpion" })
   # get("/zodiacs/pisces", { :controller => "water", :action => "fish " })
 
   # PART 3: MORE R→C→A→V PRACTICE
